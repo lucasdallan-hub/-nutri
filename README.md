@@ -21,3 +21,5 @@ Antes de publicar, substitua a marca pelos dados reais da profissional, inclua n
 `acompanhamento.html` apresenta as etapas do atendimento, perguntas frequentes e um check-in de hábitos interativo. As marcações são temporárias e não representam um prontuário ou plano nutricional individual. A página inicial inclui links para essa página.
 
 O visual usa rosa pastel e tons de framboesa, com retrato recortado da profissional na página inicial em `assets/nutricionista.png` e ilustração SVG disponível em `assets/prato-nutrir.svg`. As duas páginas são responsivas e respeitam a preferência por movimento reduzido.
+
+A marca do cabeçalho e rodapé foi convertida do PDF fornecido para `assets/raissa-alcantara-logo.png`, em PNG transparente. Nome e registro são reproduzidos conforme a arte fornecida.
