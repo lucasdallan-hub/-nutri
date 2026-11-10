@@ -1,27 +1,28 @@
-# Nutrir
+# Raissa Alcantara — Nutricionista
 
-Landing page estática e responsiva para atendimento nutricional, em português.
+Site estático com três páginas: `index.html`, `acompanhamento.html` e `privacidade.html`. Paleta principal `#B19781`. Não há dependências ou etapa de build.
 
 ## Executar
 
-Na pasta do projeto, execute:
+Na pasta do projeto:
 
 ```sh
 python3 -m http.server 3000 --bind 0.0.0.0
 ```
 
-Não há dependências de build. HTML, CSS e JavaScript são servidos diretamente. Fontes do Google Fonts requerem conexão externa; fontes locais são usadas como alternativa.
+## Publicar na Netlify
 
-## Personalizar
+Conectar o repositório e a branch `main`, deixar o comando de build vazio e configurar `.` como diretório de publicação. O arquivo `_headers` configura cabeçalhos de segurança na Netlify; o servidor Python não os aplica. Conferir HTTPS e a aplicação desses cabeçalhos no domínio publicado.
 
-Antes de publicar, substitua a marca pelos dados reais da profissional, inclua nome e registro no CRN e configure o canal de agendamento. O formulário atual prepara uma mensagem para copiar e informa que o canal ainda será disponibilizado; não envia nem armazena dados.
+## Contato e dados
 
-## Segunda página
+O contato aponta para o perfil `@raissanutri1`, informado na captura enviada pela usuária. O formulário só prepara uma mensagem para copiar, com nome opcional; não envia dados ou confirma agendamento. O check-in não persiste as marcações. Não há analytics, pixels ou fontes externas. O logo é um PNG convertido do PDF fornecido. O retrato foi preparado a partir da imagem enviada.
 
-`acompanhamento.html` apresenta as etapas do atendimento, perguntas frequentes e um check-in de hábitos interativo. As marcações são temporárias e não representam um prontuário ou plano nutricional individual. A página inicial inclui links para essa página.
+## Informações ainda a confirmar pela profissional
 
-O visual usa rosa pastel e tons de framboesa, com retrato recortado da profissional na página inicial em `assets/nutricionista.png` e ilustração SVG disponível em `assets/prato-nutrir.svg`. As duas páginas são responsivas e respeitam a preferência por movimento reduzido.
+- Região do CRN e situação do registro 22464, reproduzido da marca; o site não afirma verificação independente.
+- Modalidade, cidade e endereço de atendimento, se houver.
+- WhatsApp/e-mail, caso queira substituir ou complementar o contato pelo Instagram.
+- As práticas efetivas de atendimento, conservação de dados e hospedagem devem corresponder à política de privacidade.
 
-A marca do cabeçalho e rodapé foi convertida do PDF fornecido para `assets/raissa-alcantara-logo.png`, em PNG transparente. Nome e registro são reproduzidos conforme a arte fornecida.
-
-Paleta atual: cor principal `#B19781`, acompanhada por fundos claros em bege e textos em marrom escuro para contraste.
+Não há promessa de aprovação de anúncios. Antes de anunciar, conferir o domínio público, HTTPS, disponibilidade real do atendimento e políticas vigentes das plataformas. Mudanças que adicionem coleta de dados ou rastreamento exigem revisão da política e dos mecanismos de consentimento, quando aplicáveis.
