@@ -1,6 +1,6 @@
 # Raissa Alcantara — Nutricionista
 
-Site estático com três páginas: `index.html`, `acompanhamento.html` e `privacidade.html`. Paleta principal `#B19781`. Não há dependências ou etapa de build.
+Site estático com três páginas: `index.html`, `acompanhamento.html` e `privacidade.html`. Paleta principal rosa bebê `#F4C2D4`, com textos em ameixa escuro. Não há dependências ou etapa de build.
 
 ## Executar
 
