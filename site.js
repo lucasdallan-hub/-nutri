@@ -21,3 +21,14 @@ if (mobileMenu) {
   });
   window.matchMedia('(min-width: 961px)').addEventListener('change', closeMenu);
 }
+
+// Keep the hero usable if the external image host is temporarily unavailable.
+const portraitPhoto = document.querySelector('.portrait-photo');
+if (portraitPhoto) {
+  const showPortraitFallback = () => {
+    portraitPhoto.hidden = true;
+    document.querySelector('.portrait-fallback').hidden = false;
+  };
+  portraitPhoto.addEventListener('error', showPortraitFallback, { once: true });
+  if (portraitPhoto.complete && portraitPhoto.naturalWidth === 0) showPortraitFallback();
+}
