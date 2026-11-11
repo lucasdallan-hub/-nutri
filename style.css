@@ -52,7 +52,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .tiny-flower { color: var(--accent-ink); font-size: 26px; line-height: 1; }
 .hero-visual { position: relative; width: 100%; }
 .portrait-hero { aspect-ratio: 1433 / 1098; width: 110%; max-width: 600px; justify-self: end; align-self: start; margin-top: -20px; isolation: isolate; }
-.portrait-frame { position: absolute; inset: 0; background: none; border-radius: 0; overflow: visible; }
+.portrait-frame { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 18%, #faf4ed 0%, #f0e3d6 48%, #e2cdb8 100%); border-radius: 48% 52% 42% 58% / 52% 46% 54% 48%; overflow: hidden; box-shadow: 0 12px 36px #b1978110; }
 .portrait-frame picture { display: block; width: 100%; height: 100%; }
 .portrait-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center top; }
 .image-label { position: absolute; z-index: 2; bottom: -8px; left: -16px; display: flex; align-items: center; gap: 12px; background: var(--cream); border-radius: 18px; padding: 18px 22px; font: 19px/1.35 Georgia, serif; box-shadow: 0 15px 35px #3e30281a; transform: rotate(-4deg); }
@@ -218,8 +218,8 @@ footer > a:last-child { display: inline-flex; align-items: center; min-height: 4
 
 .portrait-fallback { position: absolute; inset: 0; display: grid; place-content: center; margin: 0; padding: 32px; text-align: center; color: var(--ink); font-size: 16px; }
 
-/* O retrato mantém o recorte inteiro, livre sobre o fundo claro. */
-.portrait-frame .portrait-photo { object-fit: contain; object-position: center top; transform: none; }
+/* A foto tem respiro interno e compartilha o recorte da forma orgânica. */
+.portrait-frame .portrait-photo { inset: 7% 5% auto; width: 90%; height: 90%; object-fit: contain; object-position: center top; transform: none; }
 
 /* Acabamento do recorte: base suave e assinatura nos tons da identidade. */
 .portrait-photo {
@@ -232,18 +232,3 @@ footer > a:last-child { display: inline-flex; align-items: center; min-height: 4
 .tiny-flower { display: flex; align-items: center; }
 @media (max-width: 960px) { .image-label { font-size: 16px; } }
 @media (max-width: 640px) { .image-label { left: 0; bottom: -24px; padding: 12px 14px; } }
-
-/* Fundo orgânico claro acompanha o retrato sem recortar sua silhueta. */
-.portrait-with-backdrop .portrait-frame::before {
-  content: '';
-  position: absolute;
-  inset: 9% 0 -3% 4%;
-  z-index: -1;
-  border-radius: 48% 52% 42% 58% / 52% 46% 54% 48%;
-  background: radial-gradient(ellipse at 30% 18%, #faf4ed 0%, #f0e3d6 48%, #e2cdb8 100%);
-  box-shadow: 0 12px 36px #b1978110;
-  pointer-events: none;
-}
-@media (max-width: 640px) {
-  .portrait-with-backdrop .portrait-frame::before { inset: 8% 0 -4% 3%; }
-}

@@ -42,6 +42,6 @@ A abertura usa o retrato sem fundo preparado a partir da nova foto enviada pela 
 - `assets/raissa-retrato.png`: PNG com transparência, usado como alternativa aos WebP.
 - `assets/raissa-retrato-480.webp`, `assets/raissa-retrato-800.webp` e `assets/raissa-retrato-1200.webp`: versões responsivas para celular e computador.
 
-O retrato é exibido inteiro e elevado na abertura, com fundo orgânico bege claro em CSS e sem recortar a silhueta, preservando a paleta `#B19781`. A política CSP permite imagens apenas da própria origem (`img-src 'self'`). Se o arquivo de imagem não carregar, é exibido um aviso neutro, sem retornar à foto anterior.
+O retrato permanece elevado na abertura e é encaixado dentro da forma orgânica, com respiro interno e recorte compartilhado com o fundo bege claro, preservando a paleta `#B19781`. A política CSP permite imagens apenas da própria origem (`img-src 'self'`). Se o arquivo de imagem não carregar, é exibido um aviso neutro, sem retornar à foto anterior.
 
 O recorte tem transição suave na base por máscara CSS, preserva o fundo claro e usa símbolo monocromático no destaque da abertura.
