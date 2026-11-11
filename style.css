@@ -220,3 +220,15 @@ footer > a:last-child { display: inline-flex; align-items: center; min-height: 4
 
 /* O retrato mantém o recorte inteiro, livre sobre o fundo claro. */
 .portrait-frame .portrait-photo { object-fit: contain; object-position: center top; transform: none; }
+
+/* Acabamento do recorte: base suave e assinatura nos tons da identidade. */
+.portrait-photo {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 92%, transparent 100%);
+}
+.image-label { left: 8px; bottom: -6px; padding: 14px 18px; gap: 12px; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 8px 24px #3e30280d; transform: none; color: var(--accent-ink); font-size: 18px; }
+.image-label > span { display: flex; align-items: center; line-height: 1; }
+.hero-spark { display: block; flex-shrink: 0; }
+.tiny-flower { display: flex; align-items: center; }
+@media (max-width: 960px) { .image-label { font-size: 16px; } }
+@media (max-width: 640px) { .image-label { left: 0; bottom: -24px; padding: 12px 14px; } }
