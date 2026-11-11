@@ -22,7 +22,7 @@ if (mobileMenu) {
   window.matchMedia('(min-width: 961px)').addEventListener('change', closeMenu);
 }
 
-// Keep the hero usable if the external image host is temporarily unavailable.
+// Keep the hero usable if the portrait image cannot be loaded.
 const portraitPhoto = document.querySelector('.portrait-photo');
 if (portraitPhoto) {
   const showPortraitFallback = () => {

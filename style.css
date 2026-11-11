@@ -217,3 +217,6 @@ footer > a:last-child { display: inline-flex; align-items: center; min-height: 4
 }
 
 .portrait-fallback { position: absolute; inset: 0; display: grid; place-content: center; margin: 0; padding: 32px; text-align: center; color: var(--ink); font-size: 16px; }
+
+/* O recorte local preenche a moldura mantendo a base integrada ao fundo bege. */
+.portrait-frame .portrait-photo { object-fit: cover; object-position: 44% bottom; transform: scale(.95); transform-origin: center bottom; }
