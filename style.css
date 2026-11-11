@@ -232,3 +232,18 @@ footer > a:last-child { display: inline-flex; align-items: center; min-height: 4
 .tiny-flower { display: flex; align-items: center; }
 @media (max-width: 960px) { .image-label { font-size: 16px; } }
 @media (max-width: 640px) { .image-label { left: 0; bottom: -24px; padding: 12px 14px; } }
+
+/* Fundo orgânico claro acompanha o retrato sem recortar sua silhueta. */
+.portrait-with-backdrop .portrait-frame::before {
+  content: '';
+  position: absolute;
+  inset: 9% 0 -3% 4%;
+  z-index: -1;
+  border-radius: 48% 52% 42% 58% / 52% 46% 54% 48%;
+  background: radial-gradient(ellipse at 30% 18%, #faf4ed 0%, #f0e3d6 48%, #e2cdb8 100%);
+  box-shadow: 0 12px 36px #b1978110;
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .portrait-with-backdrop .portrait-frame::before { inset: 8% 0 -4% 3%; }
+}
