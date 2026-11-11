@@ -51,14 +51,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero-note { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; margin-top: 12px; }
 .tiny-flower { color: var(--accent-ink); font-size: 26px; line-height: 1; }
 .hero-visual { position: relative; width: 100%; }
-.portrait-hero { aspect-ratio: 4 / 5; max-width: 520px; justify-self: end; isolation: isolate; }
-.portrait-frame { position: absolute; inset: 0; background: linear-gradient(150deg, #f5ede3, #b19781); border-radius: 230px 230px 32px 32px; overflow: hidden; }
+.portrait-hero { aspect-ratio: 1433 / 1098; width: 110%; max-width: 600px; justify-self: end; align-self: start; margin-top: -20px; isolation: isolate; }
+.portrait-frame { position: absolute; inset: 0; background: none; border-radius: 0; overflow: visible; }
 .portrait-frame picture { display: block; width: 100%; height: 100%; }
-.portrait-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
-.image-label { position: absolute; z-index: 2; bottom: 28px; left: -16px; display: flex; align-items: center; gap: 12px; background: var(--cream); border-radius: 18px; padding: 18px 22px; font: 19px/1.35 Georgia, serif; box-shadow: 0 15px 35px #3e30281a; transform: rotate(-4deg); }
+.portrait-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center top; }
+.image-label { position: absolute; z-index: 2; bottom: -8px; left: -16px; display: flex; align-items: center; gap: 12px; background: var(--cream); border-radius: 18px; padding: 18px 22px; font: 19px/1.35 Georgia, serif; box-shadow: 0 15px 35px #3e30281a; transform: rotate(-4deg); }
 .image-label > span { font-size: 38px; color: var(--accent-ink); }
 .image-label strong { font-weight: 400; }
-.visual-sticker { position: absolute; right: -12px; top: 60px; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 116px; height: 116px; background: #eee1c4; color: #54422d; border-radius: 50%; font-size: 13px; line-height: 1.5; transform: rotate(13deg); }
+.visual-sticker { position: absolute; right: 0; top: 8px; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 116px; height: 116px; background: #eee1c4; color: #54422d; border-radius: 50%; font-size: 13px; line-height: 1.5; transform: rotate(13deg); }
 .visual-sticker strong { font-size: 17px; }
 .visual-sticker span { font-size: 23px; }
 .values-strip { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 16px 28px; background: var(--ink); color: #f8efe5; padding: 22px var(--gutter); font-size: 14px; }
@@ -149,10 +149,11 @@ footer > a:last-child { display: inline-flex; align-items: center; min-height: 4
   .mobile-menu nav a { min-height: 48px; padding: 10px 14px; border-radius: 8px; font-size: 16px; }
   .mobile-menu nav a:hover, .mobile-menu nav a:focus-visible { background: var(--surface); }
   .hero { gap: 32px; }
+  .portrait-hero { width: 100%; margin-top: 0; }
   h1 { font-size: clamp(42px, 5.7vw, 58px); }
-  .image-label { left: 0; bottom: 20px; font-size: 16px; padding: 14px 16px; gap: 8px; }
+  .image-label { left: 0; bottom: -8px; font-size: 16px; padding: 14px 16px; gap: 8px; }
   .image-label > span { font-size: 30px; }
-  .visual-sticker { width: 92px; height: 92px; right: 0; top: 30px; font-size: 12px; }
+  .visual-sticker { width: 92px; height: 92px; right: 0; top: 0; font-size: 12px; }
   .visual-sticker strong { font-size: 14px; }
   .values-strip { gap: 14px 22px; }
   .values-strip i { display: none; }
@@ -167,7 +168,7 @@ footer > a:last-child { display: inline-flex; align-items: center; min-height: 4
 }
 @media (max-width: 767px) {
   .hero, .about, .journey { grid-template-columns: minmax(0, 1fr); }
-  .hero { padding-top: 16px; gap: 36px; }
+  .hero { padding-top: 16px; gap: 24px; }
   h1 { font-size: clamp(38px, 8vw, 60px); }
   .hero-copy { max-width: 560px; }
   .hero-copy > p { max-width: none; }
@@ -195,8 +196,7 @@ footer > a:last-child { display: inline-flex; align-items: center; min-height: 4
   .hero-copy > .button { width: 100%; }
   .hero-secondary { font-size: 14px; }
   .hero-note { font-size: 12px; }
-  .portrait-frame { border-radius: 180px 180px 26px 26px; }
-  .image-label { bottom: 16px; }
+  .image-label { bottom: -8px; }
   .values-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); font-size: 13px; text-align: center; gap: 16px; }
   .art-caption { font-size: 10px; }
   .cards { grid-template-columns: minmax(0, 1fr); gap: 18px; }
@@ -218,5 +218,5 @@ footer > a:last-child { display: inline-flex; align-items: center; min-height: 4
 
 .portrait-fallback { position: absolute; inset: 0; display: grid; place-content: center; margin: 0; padding: 32px; text-align: center; color: var(--ink); font-size: 16px; }
 
-/* O recorte local preenche a moldura mantendo a base integrada ao fundo bege. */
-.portrait-frame .portrait-photo { object-fit: cover; object-position: 44% bottom; transform: scale(.95); transform-origin: center bottom; }
+/* O retrato mantém o recorte inteiro, livre sobre o fundo claro. */
+.portrait-frame .portrait-photo { object-fit: contain; object-position: center top; transform: none; }
